@@ -4,27 +4,36 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserInformation {
-    private String firstName;
-    private String lastName;
+    private String firstNamePattern;
+    private String lastNamePattern;
+    private String emailPattern;
 
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstNamePattern(String firstNamePattern) {
+        this.firstNamePattern = firstNamePattern;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstNamePattern() {
+        return firstNamePattern;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastNamePattern() {
+        return lastNamePattern;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastNamePattern(String lastNamePattern) {
+        this.lastNamePattern = lastNamePattern;
     }
 
-    public void validatingInput(String input,String checkPattern,String option){
+    public String getEmailPattern() {
+        return emailPattern;
+    }
+
+    public void setEmail(String emailPattern) {
+        this.emailPattern = emailPattern;
+    }
+
+    public void validatingInput(String input, String checkPattern, String option){
         Pattern pattern = Pattern.compile(checkPattern);
         Matcher matcher = pattern.matcher(input);
         if (matcher.matches())
