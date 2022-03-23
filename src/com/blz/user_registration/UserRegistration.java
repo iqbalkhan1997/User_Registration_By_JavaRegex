@@ -1,19 +1,19 @@
 package com.blz.user_registration;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class UserRegistration {
-    public final String firstName = "^[A-Z]{1}[a-z]{2,}$";
 
-
-    public void checkFirstName(String enteredFirstName) {
-        Pattern pattern = Pattern.compile(firstName);
-        Matcher matcher = pattern.matcher(enteredFirstName);
-        if (matcher.matches())
-            System.out.println("Entered firstName " +enteredFirstName+" is valid");
-        else
-            System.out.println("firstName " +enteredFirstName+" is invalid");
+    public void validateFirstName(String firstName){
+        UserInformation store =new UserInformation();
+        store.setFirstName("^[A-Z]{1}[a-z]{3,}$");
+        String first= store.getFirstName();
+        store.validatingInput(firstName,first,"FirstName");
     }
+    public void validateLastName(String lastName){
+        UserInformation f=new UserInformation();
+        f.setLastName("^[A-Z]{1}[a-z]{3,}$");
+        String last= f.getLastName();
+        f.validatingInput(lastName,last,"LastName");
+    }
+
 }
 
