@@ -1,5 +1,8 @@
 package com.blz.user_registration;
     import java.util.*;
+    import java.util.regex.Matcher;
+    import java.util.regex.Pattern;
+
 public class UserRegistrationMain {
 
     public static void main(String[] args) {
@@ -8,7 +11,8 @@ public class UserRegistrationMain {
         Scanner scan = new Scanner(System.in);
         System.out.println("1.To Validate the First name.");
         System.out.println("2.To Validate the Second Name.");
-        System.out.println("3.TO Validate Email id");
+        System.out.println("3.To Validate Email id");
+        System.out.println("4.To Validate Mobile Number");
         System.out.println("Enter the option number to perform the operation");
         int option = scan.nextInt();
         switch(option){
@@ -27,10 +31,15 @@ public class UserRegistrationMain {
                 String email = scan.next();
                 validate.validateEmail(email);
                 break;
+            case 4:
+                System.out.println("Enter the Mob no:. Eg:-91 9919819801");
+                scan.nextLine();
+                String input = scan.nextLine();
+                validate.validateMobNumber(input);
+                break;
             default:
                 System.out.println("Please Enter valid option to validate the patter");
                 break;
         }
-
     }
 }

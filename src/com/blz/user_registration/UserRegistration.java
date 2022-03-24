@@ -15,9 +15,14 @@ public class UserRegistration {
     }
 
     public void validateEmail(String email){
-        storePattern.setEmail("^[a-z]{3,}(.[a-z]{3,})*@[a-z]{2,}.[a-z]{2,3}([.+_-][a-z]{2})*$");
+        storePattern.setEmailPattern("^[a-z]{3,}(.[a-z]{3,})*@[a-z]{2,}.[a-z]{2,3}([.+_-][a-z]{2})*$");
         String mail= storePattern.getEmailPattern();
         storePattern.validatingInput(email,mail,"Email");
+    }
+    public void validateMobNumber(String number){
+        storePattern.setMobNumPattern("^[0-9]{2}\s?[0-9]{10}");
+        String mobPattern= storePattern.getMobNumPattern();
+        storePattern.validatingInput(number,mobPattern,"Mobile Number");
     }
 
 }

@@ -7,19 +7,15 @@ public class UserInformation {
     private String firstNamePattern;
     private String lastNamePattern;
     private String emailPattern;
-
+    private String mobNumPattern;
 
     public void setFirstNamePattern(String firstNamePattern) {
         this.firstNamePattern = firstNamePattern;
     }
 
-    public String getFirstNamePattern() {
-        return firstNamePattern;
-    }
+    public String getFirstNamePattern() {   return firstNamePattern;    }
 
-    public String getLastNamePattern() {
-        return lastNamePattern;
-    }
+    public String getLastNamePattern() {    return lastNamePattern;    }
 
     public void setLastNamePattern(String lastNamePattern) {
         this.lastNamePattern = lastNamePattern;
@@ -29,9 +25,16 @@ public class UserInformation {
         return emailPattern;
     }
 
-    public void setEmail(String emailPattern) {
-        this.emailPattern = emailPattern;
+    public void setEmailPattern(String emailPattern) {  this.emailPattern = emailPattern;   }
+
+    public String getMobNumPattern() {
+        return mobNumPattern;
     }
+
+    public void setMobNumPattern(String mobNumPattern) {
+        this.mobNumPattern = mobNumPattern;
+    }
+
 
     public void validatingInput(String input, String checkPattern, String option){
         Pattern pattern = Pattern.compile(checkPattern);
