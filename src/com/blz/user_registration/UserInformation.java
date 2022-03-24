@@ -8,6 +8,7 @@ public class UserInformation {
     private String lastNamePattern;
     private String emailPattern;
     private String mobNumPattern;
+    private String passwordPattern;
 
     public void setFirstNamePattern(String firstNamePattern) {
         this.firstNamePattern = firstNamePattern;
@@ -35,6 +36,9 @@ public class UserInformation {
         this.mobNumPattern = mobNumPattern;
     }
 
+    public String getPasswordPattern() {    return passwordPattern; }
+
+    public void setPasswordPattern(String passwordPattern) {    this.passwordPattern = passwordPattern; }
 
     public void validatingInput(String input, String checkPattern, String option){
         Pattern pattern = Pattern.compile(checkPattern);
