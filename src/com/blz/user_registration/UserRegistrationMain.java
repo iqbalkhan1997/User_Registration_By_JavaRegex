@@ -1,8 +1,5 @@
 package com.blz.user_registration;
     import java.util.*;
-    import java.util.regex.Matcher;
-    import java.util.regex.Pattern;
-
 public class UserRegistrationMain {
 
     public static void main(String[] args) {
@@ -39,7 +36,7 @@ public class UserRegistrationMain {
                 validate.validateMobNumber(input);
                 break;
             case 5:
-                System.out.println("Enter the Password. Note: minimum 8 characters should be given");
+                System.out.println("Enter the Password. Note: minimum 1 UpperCase & minimum 8 characters should be given");
                 String password= scan.next();
                 validate.validatePassword(password);
                 break;
