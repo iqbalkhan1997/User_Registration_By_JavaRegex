@@ -52,4 +52,14 @@ public class UserInformation {
         else
             System.out.println("Entered "+option+ " : " +input+" is invalid");
     }
+    public static void validateEmailsList(String[] emails) {
+        for(int i=0; i< emails.length;i++){
+            Pattern pattern = Pattern.compile("([a-z]|[a-z+-.a-z0-9])+((@[^-]+[a-z+.a-z+.a-z])|(@[^-][a-z+.a-z]))");
+            Matcher matcher = pattern.matcher(emails[i]);
+            if (matcher.matches())
+                System.out.println(emails[i]+ " : This Email id is valid");
+            else
+                System.out.println(emails[i]+ " : This Email id is Invalid");
+        }
+    }
 }
