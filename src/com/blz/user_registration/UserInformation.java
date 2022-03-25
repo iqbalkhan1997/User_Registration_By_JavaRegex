@@ -4,12 +4,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserInformation {
-    private static String firstNamePattern;
+    private String firstNamePattern;
     private String lastNamePattern;
     private String emailPattern;
     private String mobNumPattern;
     private String passwordPattern;
-    private String emailsListPattern;
+
 
     public void setFirstNamePattern(String firstNamePattern) {
         this.firstNamePattern = firstNamePattern;
@@ -40,10 +40,6 @@ public class UserInformation {
     public String getPasswordPattern() {    return passwordPattern; }
 
     public void setPasswordPattern(String passwordPattern) {    this.passwordPattern = passwordPattern; }
-
-    public String getEmailsListPattern() {    return emailsListPattern;   }
-
-    public void setEmailsListPattern(String emailsListPattern) {  this.emailsListPattern = emailsListPattern; }
 
     public void validatingInput(String input, String checkPattern, String option){
         Pattern pattern = Pattern.compile(checkPattern);
