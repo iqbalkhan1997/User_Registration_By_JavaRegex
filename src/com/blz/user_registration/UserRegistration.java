@@ -29,6 +29,5 @@ public class UserRegistration {
         String passPattern= storePattern.getPasswordPattern();
         storePattern.validatingInput(password,passPattern,"Password");
     }
-
 }
 
