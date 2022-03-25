@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserInformation {
-    private String firstNamePattern;
+    private static String firstNamePattern;
     private String lastNamePattern;
     private String emailPattern;
     private String mobNumPattern;
