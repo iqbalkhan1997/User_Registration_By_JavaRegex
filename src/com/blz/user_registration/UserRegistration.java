@@ -25,10 +25,9 @@ public class UserRegistration {
         storePattern.validatingInput(number,mobPattern,"Mobile Number");
     }
     public void validatePassword(String password){
-        storePattern.setPasswordPattern("(?=.*{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*():<>?]).*");
+        storePattern.setPasswordPattern("(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]*[@#$%_!^&*][0-9a-zA-Z]*");
         String passPattern= storePattern.getPasswordPattern();
         storePattern.validatingInput(password,passPattern,"Password");
     }
-
 }
 
