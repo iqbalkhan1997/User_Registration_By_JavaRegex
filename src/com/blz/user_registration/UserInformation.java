@@ -9,6 +9,10 @@ public class UserInformation {
     private String emailPattern;
     private String mobNumPattern;
     private String passwordPattern;
+<<<<<<< HEAD
+=======
+
+>>>>>>> UC9_Validating_Emails_List_Provided
 
     public void setFirstNamePattern(String firstNamePattern) {
         this.firstNamePattern = firstNamePattern;
